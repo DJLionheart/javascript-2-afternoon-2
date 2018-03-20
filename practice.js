@@ -204,11 +204,11 @@ function addItem(myGroceryList, item){
 */
 
 function maker(){
-  var newArray = [];
+  var createdArray = [];
   for(let i = 1; i <=215; i++){
-    newArray.push(i);
+    createdArray.push(i);
   }
-  return newArray;
+  return createdArray;
 }
 
 
@@ -224,8 +224,10 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
-
+function addTen(numbers){
+  var newArray = numbers.map(element => +element + 10);
+  return newArray;
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -249,7 +251,13 @@ for(var i = 0; i < num2; i++){
   Return the array which is longest.
 */
 
-//Code Here
+function longer(arr1, arr2){
+  if(arr1.length > arr2.length){
+    return arr1;
+  } else {
+    return arr2;
+  }
+}
 
 
 
@@ -261,7 +269,10 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+// function both(arr1, arr2){
+//   var matchingNums = [];
+//   for(let i = 0; i < )
+// }
 
 
 
