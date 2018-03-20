@@ -108,7 +108,20 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider(numbersArray){
+  var dividedArray = [];
+  var evens = [];
+  var odds = [];
+  for(let i = 0; i < numbersArray.length; i++){
+    if(numbersArray[i]%2 === 0){
+      evens.push(numbersArray[i]);
+    } else{
+      odds.push(numbersArray[i]);
+    }
+  }
+  dividedArray.push(evens, odds);
+  return dividedArray;
+}
 
 
 
@@ -129,8 +142,14 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
-
+function finder(arr){
+  var randomNum = getRandomArbitrary();
+  if(arr.includes(randomNum)){
+    return true;
+  } else {
+    return false;
+  }
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -156,9 +175,27 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 */
 
-//Code Here
+function removeItem(myGroceryList, item){
+  if(typeof item === "string"){
+    for(let i = 0; i < myGroceryList.length; i++){
+      if(item === myGroceryList[i]){
+        myGroceryList.splice(i,1);
+      }
+    }
+    return myGroceryList;
+  } else {
+    return [];
+  } 
+}
 
-
+function addItem(myGroceryList, item){
+  if(typeof item === "string" && myGroceryList.includes(item) === false){
+    myGroceryList.push(item);
+    return myGroceryList;
+  } else {
+    return [];
+  }
+}
 
 ////////// PROBLEM 9 //////////
 
@@ -166,8 +203,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
-
+function maker(){
+  var newArray = [];
+  for(let i = 1; i <=215; i++){
+    newArray.push(i);
+  }
+  return newArray;
+}
 
 
 ////////// PROBLEM 10 //////////
